@@ -2,16 +2,12 @@
 
 Welcome to the **Telegram Eid Greetings Card Bot**! This bot is designed to spread joy and blessings during Eid by generating personalized greeting cards and messages for your Telegram group members. 🎨✨
 
----
-
 ## 🚀 Features
 
 - **Personalized Eid Cards**: Automatically generate beautiful Eid Mubarak cards for each group member.
 - **Randomized Greetings**: Choose from a variety of heartfelt greetings in Bengali.
 - **Easy to Use**: Simple commands to generate and share cards in your Telegram groups.
 - **Open Source**: Contribute and improve the project on [GitHub](https://github.com/SharafatKarim/telegram-eid-greetings-card-bot).
-
----
 
 ## 🛠️ Installation
 
@@ -54,8 +50,6 @@ Welcome to the **Telegram Eid Greetings Card Bot**! This bot is designed to spre
    python bot.py
    ```
 
----
-
 ## 📋 Usage
 
 ### Basic
@@ -68,8 +62,6 @@ to tag members and send messages.
 - **`/start`**: Get a welcome message and instructions.
 - **`/help`**: View detailed help information.
 - **`/gen`**: Generate personalized Eid cards for all group members (group-only command).
-
----
 
 ## 📂 Project Structure
 
@@ -90,8 +82,6 @@ telegram-eid-greetings-card-bot/
 > If you just want to generate Eid cards, you can ignore the `bot.py` and `lib.py` files.
 > Simply run the `main.py` script to generate cards using the default template and greetings.
 
----
-
 ## 🖼️ Example Output
 
 Here’s an example of a generated Eid card:
@@ -99,8 +89,6 @@ Here’s an example of a generated Eid card:
 | Screenshot from Telegram | Sample card 1 | Sample card 2 |
 |---------------------------|----------------|----------------|
 | ![Screenshot](samples/ss.webp) | ![Sample 1](samples/1.webp) | ![Sample 2](samples/2.webp) |
-
----
 
 ## 🤝 Contributing
 
@@ -110,15 +98,11 @@ We welcome contributions! To contribute:
 2. Create a new branch for your feature or bug fix.
 3. Submit a pull request with a detailed description of your changes.
 
----
-
 ## 📜 License
 
 - This project is licensed under the [CC0 License](https://creativecommons.org/publicdomain/zero/1.0/).
 - And the templates are modified version of [Eid Card Generator - Codepotro](https://github.com/codepotro/Eid-Card-Generator/) project.
 If your'e a designer feel free to use your own or create a PR to improve the project.
-
----
 
 ## 🌟 Acknowledgments
 
@@ -129,8 +113,6 @@ If your'e a designer feel free to use your own or create a PR to improve the pro
 And I was inspired by an [Eid Card Generator - Codepotro](https://github.com/codepotro/Eid-Card-Generator/).
 Special thanks go to this kool project. My default asset (**AbuSayed-Regular** font) and the basic concept
 of default template is taken from their repository.
-
----
 
 ## 📬 Contact
 
