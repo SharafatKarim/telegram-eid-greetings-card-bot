@@ -9,6 +9,14 @@ Welcome to the **Telegram Eid Greetings Card Bot**! This bot is designed to spre
 - **Easy to Use**: Simple commands to generate and share cards in your Telegram groups.
 - **Open Source**: Contribute and improve the project on [GitHub](https://github.com/SharafatKarim/telegram-eid-greetings-card-bot).
 
+## 🖼️ Example Output
+
+Here’s an example of a generated Eid card:
+
+| Screenshot from Telegram | Sample card 1 | Sample card 2 |
+|---------------------------|----------------|----------------|
+| ![Screenshot](samples/ss.webp) | ![Sample 1](samples/1.webp) | ![Sample 2](samples/2.webp) |
+
 ## 🛠️ Installation
 
 1. **Clone the Repository**:
@@ -81,14 +89,6 @@ telegram-eid-greetings-card-bot/
 > [!important]
 > If you just want to generate Eid cards, you can ignore the `bot.py` and `lib.py` files.
 > Simply run the `main.py` script to generate cards using the default template and greetings.
-
-## 🖼️ Example Output
-
-Here’s an example of a generated Eid card:
-
-| Screenshot from Telegram | Sample card 1 | Sample card 2 |
-|---------------------------|----------------|----------------|
-| ![Screenshot](samples/ss.webp) | ![Sample 1](samples/1.webp) | ![Sample 2](samples/2.webp) |
 
 ## 🤝 Contributing
 
