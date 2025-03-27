@@ -1,0 +1,4 @@
+pillow
+python-dotenv
+python-telegram-bot
+telethon
