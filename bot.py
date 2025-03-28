@@ -20,6 +20,7 @@ from telegram.constants import ChatMemberStatus
 from telegram.helpers import mention_html
 
 from lib import get_all_user_ids
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
 
 # Load .env file
@@ -42,6 +43,15 @@ logger = logging.getLogger(__name__)
 # context.
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Send a welcome message when the command /start is issued."""
+    keyboard = [
+        [
+            InlineKeyboardButton(
+                "🌟 View on GitHub 🚀", url="https://github.com/SharafatKarim/telegram-eid-greetings-card-bot"
+            )
+        ]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+
     user = update.effective_user
     await update.message.reply_html(
         rf"""
@@ -53,12 +63,21 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         - Type <b>/help</b> if you need assistance. Let's spread joy and blessings! 🌸
         - This is an open source project and is available on GitHub 🚀. Feel free to contribute ❤️.
         """,
-        reply_markup=ForceReply(selective=True),
+        reply_markup=reply_markup
     )
 
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Send a detailed help message when the command /help is issued."""
+    keyboard = [
+        [
+            InlineKeyboardButton(
+                "🌟 View on GitHub 🚀", url="https://github.com/SharafatKarim/telegram-eid-greetings-card-bot"
+            )
+        ]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+
     await update.message.reply_html(
         """
         🤔 <b>Need Help?</b> 
@@ -68,9 +87,12 @@ Here's what I can do:
         - Use <b>/gen</b> in a group to generate beautiful Eid Mubarak messages and cards for all group members. 🌙✨
         - Make sure to add me to a group and give me the necessary permissions to mention users and send images. 📸
 
-        - This is an open source project and is available on GitHub 🚀. Feel free to contribute ❤️.
+        - This is an open source project and is available on GitHub 🚀. 
+        
+Feel free to contribute ❤️.
 Let's make this Eid special! 🎉
-        """
+        """,
+        reply_markup=reply_markup
     )
 
 
@@ -103,7 +125,7 @@ async def gen_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                 or user.is_bot
             ):
                 print(
-                    f"Skipping user {user_id}, name {user.first_name} because of being {chat_member.status}"
+                    f"🤖 Skipping user {user_id}, name {user.first_name} because of being {chat_member.status}"
                 )
                 continue
 
@@ -124,17 +146,17 @@ async def gen_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                     )
             except Exception as e:
                 await context.bot.send_message(chat.id, message, parse_mode="HTML")
-                print(f"Error sending image: {e}")
+                print(f"🖼️ Error sending image: {e}")
 
             # await context.bot.send_message(chat.id, message, parse_mode="HTML")
             try:
                 os.remove(f"output/{image_file_name}.png")
             except Exception as e:
-                print(f"Error deleting image: {e}")
+                print(f"🗑️ Error deleting image: {e}")
 
             await asyncio.sleep(1)
         except Exception as e:
-            print(f"Failed to send message to {user_id}: {e}")
+            print(f"⚠️💬 Failed to send message to {user_id}: {e}")
 
 
 def main() -> None:
